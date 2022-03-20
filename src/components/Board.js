@@ -1,14 +1,15 @@
-import Square from "./Square";
-import { Component } from "react";
+
+import { Component } from 'react';
+import Square from './Square';
 import './Board.css';
 
 export default class Board extends Component {
-    renderSquare(i){
-        return <Square value={this.props.square[i]}
-        onClick={()=>this.props.onClick(i)}
+    renderSquare(i) {
+        return <Square value={this.props.squares[i]}
+        onClick={() => this.props.onClick(i)}
         />
     }
-    render () {
+    render() {
         return (
             <div>
                 <div className="border-row">
@@ -16,12 +17,12 @@ export default class Board extends Component {
                     {this.renderSquare(1)}
                     {this.renderSquare(2)}
                 </div>
-                <div className="border-row">
+                <div className="border-row2">
                     {this.renderSquare(3)}
                     {this.renderSquare(4)}
                     {this.renderSquare(5)}
                 </div>
-                <div className="border-row">
+                <div className="border-row3">
                     {this.renderSquare(6)}
                     {this.renderSquare(7)}
                     {this.renderSquare(8)}

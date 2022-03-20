@@ -1,5 +1,10 @@
-.border-row:after {
+.board-row:after {
     clear: both;
     content: "";
     display: table;
+   }
+
+.border-row {
+    display: flex;
+    flex-direction: row;
 }
